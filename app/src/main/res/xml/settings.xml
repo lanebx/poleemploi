@@ -1,0 +1,53 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Research">
+        <EditTextPreference
+            android:key="numberOfResults"
+            android:max="50"
+            app:min="1"
+            app:title="Number of jobs displayed" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Filters">
+        <ListPreference
+            android:defaultValue="CDD,CDI"
+            android:entries="@array/arrayRadio"
+            android:entryValues="@array/arrayRadioValues"
+            android:key="radio_preference"
+            android:title="Contracts Types" />
+        <EditTextPreference
+            android:key="departementChoice"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Departement"
+            app:dialogMessage="enter 0 to disable this filter" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="inclureLimi"
+            android:title="Include close departements" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="fullTime"
+            android:title="Show only full-time vacancies" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Favorites">
+        <ListPreference
+            android:defaultValue="CDD,CDI"
+            android:entries="@array/arrayRadio2"
+            android:entryValues="@array/arrayRadioValues2"
+            android:key="radio_preference2"
+            android:title="Contracts Types" />
+        <SwitchPreference
+            android:key="logo"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Display only jobs with logo" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="alphabetical"
+            android:title="Show favorites in alphabetical order" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
